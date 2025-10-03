@@ -1,25 +1,37 @@
-# 🕷️ C++ Web Crawler
+# 🕷️ Web Crawler & Spider (C++ & Python)
 
-A fast and lightweight **web crawler** written in C++.  
-It extracts all links from a given website and can be extended for penetration testing or data collection.
+A collection of lightweight **web crawling tools** written in **C++** and **Python**.  
+You can choose between the **C++ web crawler** (fast, compiled) or the **Python spider** (flexible, easy to extend).
 
 ---
 
 ## ✨ Features
-- 🌐 Crawl and extract internal & external URLs
-- 🔗 Handle relative and absolute links
+- 🌐 Crawl and extract all internal & external links
+- 🔗 Handle relative/absolute URLs
+- 💉 Easy to extend for vulnerability testing (SQLi, XSS, etc.)
 - 🎨 Colorized terminal output
-- ⚡ Fast execution using C++ STL & libcurl
+- ⚡ Both **C++ (performance)** and **Python (flexibility)** versions
 
 ---
 
-## 📦 Requirements
 
+---
+
+## 🛠️ Installation
+
+### 🔹 C++ Version
 Make sure you have:
-- A C++17 compatible compiler (g++, clang++, MSVC)
-- [libcurl](https://curl.se/libcurl/) installed
+- C++17 compiler (g++, clang++)
+- [libcurl](https://curl.se/libcurl/)
 
-On Linux (Debian/Ubuntu):
+Build:
 ```bash
-sudo apt update
-sudo apt install g++ libcurl4-openssl-dev
+cd cpp
+g++ -std=c++17 crawl.cpp -o crawler -lcurl
+
+./crawler https://example.com
+
+// For Python Spider You run this command
+python spider.py -u https://example.com 
+
+
